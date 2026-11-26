@@ -1,4 +1,4 @@
-# 👑🍔 EPIK KING PRESENTS TO YOU: EPIK KING MONSTER BURGER PARK
+# 👑🍔 EPIK KING PRESENTS TO YOU: EPIK KING MONSTER BURGER PARK [WWW.BURGERPARKS.SHONO.NET](https://www.burgerparks.shono.net)
 
 ![logo](images/logo.PNG)
 
@@ -40,6 +40,6 @@ Find your way through the **Melted Cheese Maze**, take in views of the whole kin
 
 Open daily, including weekends and public holidays. Children under 5 enter **free**, because every future king starts somewhere.
 
-# [Book your tickets here](https://www.burgerparks.shono.net)
+# [Book your tickets at WWW.BURGERPARKS.SHONO.NET](https://www.burgerparks.shono.net)
 
 **Long live EPIK. Long live BURGER.** 👑
