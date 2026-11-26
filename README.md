@@ -40,6 +40,6 @@ Find your way through the **Melted Cheese Maze**, take in views of the whole kin
 
 Open daily, including weekends and public holidays. Children under 5 enter **free**, because every future king starts somewhere.
 
-Book your tickets through our online booking system, which checks your visiting date and gives you the right price for weekdays, weekends and public holidays.
+# [Book your tickets here](https://www.burgerparks.shono.net)
 
 **Long live EPIK. Long live BURGER.** 👑
