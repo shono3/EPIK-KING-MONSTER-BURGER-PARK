@@ -1,4 +1,3 @@
-import base64
 import os
 from datetime import date, datetime
 
@@ -131,27 +130,14 @@ def show_ticket_card(ticket_id):
     st.markdown(f"## :red[{ticket_id}]")
     st.divider()
 
-@st.cache_resource
-def load_logo_base64():
-    """Read logo.png once, return it as base64 text (None if file missing)."""
-    # Skip logo if file missing (crash prevention)
-    if not os.path.exists(LOGO_FILE):
-        return None
-    with open(LOGO_FILE, "rb") as file:
-        return base64.b64encode(file.read()).decode()
-
 def page_header(title, caption):
     """Title + caption on the left, park logo top-right. Used by every screen."""
     title_col, logo_col = st.columns([3, 1], vertical_alignment="center")
     title_col.title(title)
     title_col.caption(caption)
-    # Plain HTML <img>, not st.image (st.image pulls in numpy, which crashed on Python 3.14)
-    logo = load_logo_base64()
-    if logo:
-        logo_col.markdown(
-            f"<img src='data:image/png;base64,{logo}' style='width:100%' alt='Park logo'>",
-            unsafe_allow_html=True,
-        )
+    # Skip logo if file missing (crash prevention)
+    if os.path.exists(LOGO_FILE):
+        logo_col.image(LOGO_FILE, width="stretch")
 
 # Screen 1: select tickets
 def show_select_screen():
