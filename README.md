@@ -1,6 +1,6 @@
 # 👑🍔 EPIK KING PRESENTS TO YOU: EPIK KING MONSTER BURGER PARK
 
-![logo](images/burger-king.png)
+![logo](images/logo.png)
 
 > *"Bow before the him. Pick up the bruhgers and fries, die for him."*
 
