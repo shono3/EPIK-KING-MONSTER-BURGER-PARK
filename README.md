@@ -1,5 +1,5 @@
 # 👑🍔 EPIK KING PRESENTS TO YOU: EPIK KING MONSTER BURGER PARK 
-# [🔗 WWW.BURGERPARKS.SHONO.NET](https://www.burgerparks.shono.net)
+# 🔗 [WWW.BURGERPARKS.SHONO.NET](https://www.burgerparks.shono.net)
 
 ![logo](images/logo.PNG)
 
