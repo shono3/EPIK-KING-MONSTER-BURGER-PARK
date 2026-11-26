@@ -2,7 +2,7 @@
 
 ![logo](images/logo.PNG)
 
-> *"Bow before the him. Pick up the bruhgers and fries, die for him."*
+## Bow before the him. pick up your bruhgers and fries, die for him.
 
 Welcome to **EPIK KING Monster Burger Park**, Singapore's first and only theme park ruled by a burger-devouring, axe-wielding king.
 
@@ -11,8 +11,6 @@ Legend says the old King conquered every food kingdom in the land, but none of t
 ## 🏰 Explore the Kingdom
 
 ![Park map](images/park-map.png)
-
-The park is divided into six areas, each inspired by a layer of the ultimate burger and arranged around the shimmering **Soda Sea**.
 
 ### 🟠 Sesame Square
 *Main entrance & shopping street*
