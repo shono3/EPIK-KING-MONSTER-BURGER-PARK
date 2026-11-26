@@ -1,3 +1,4 @@
+import os
 from datetime import date, datetime
 
 import streamlit as st
@@ -22,6 +23,9 @@ from storage import find_booking, load_bookings, save_booking
 COUNT_KEYS = {category: f"count_{category}" for category in CATEGORIES}
 DATE_KEY = "visit_date_input"
 CONTACT_KEYS = ["name", "email", "phone"]
+
+# Logo
+LOGO_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "logo.png")
 
 # Session state helpers
 def default_counts():
@@ -126,10 +130,18 @@ def show_ticket_card(ticket_id):
     st.markdown(f"## :red[{ticket_id}]")
     st.divider()
 
+def page_header(title, caption):
+    """Title + caption on the left, park logo top-right. Used by every screen."""
+    title_col, logo_col = st.columns([3, 1], vertical_alignment="center")
+    title_col.title(title)
+    title_col.caption(caption)
+    # Skip logo if file missing (crash prevention)
+    if os.path.exists(LOGO_FILE):
+        logo_col.image(LOGO_FILE, width="stretch")
+
 # Screen 1: select tickets
 def show_select_screen():
-    st.title("Theme Park Tickets")
-    st.caption("Step 1 of 3: Choose your tickets")
+    page_header("Theme Park Tickets", "Step 1 of 3: Choose your tickets")
 
     # Price table built from config (price change = no edit here)
     table = "| Category | Age | Price |\n|---|---|---|\n"
@@ -190,8 +202,7 @@ def show_select_screen():
 
 # Screen 2: checkout
 def show_checkout_screen():
-    st.title("Theme Park Tickets")
-    st.caption("Step 2 of 3: Checkout")
+    page_header("Theme Park Tickets", "Step 2 of 3: Checkout")
 
     counts = st.session_state.counts
     visit_date = st.session_state.visit_date
@@ -258,8 +269,7 @@ def show_confirmation_screen():
         go_to("select")
         return
 
-    st.title("Theme Park Tickets")
-    st.caption("Step 3 of 3: Confirmation")
+    page_header("Theme Park Tickets", "Step 3 of 3: Confirmation")
     st.success("Booking confirmed!")
 
     with st.container(border=True):
@@ -278,8 +288,7 @@ def show_confirmation_screen():
 
 # Screen 4: retrieve ticket
 def show_retrieve_screen():
-    st.title("Retrieve your ticket")
-    st.caption("Find an existing booking")
+    page_header("Retrieve your ticket", "Find an existing booking")
 
     contact_col, id_col = st.columns(2)
     contact = contact_col.text_input("Email or phone number", placeholder="name@example.com")
